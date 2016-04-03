@@ -5,6 +5,7 @@ var BaseElement = require('./base.element.js');
 function Food (options) {
 
     options = options || {};
+    BaseElement.call(this, options);
 
 }
 

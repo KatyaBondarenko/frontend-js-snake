@@ -5,6 +5,7 @@ var BaseElement = require('./base.element.js');
 function  SnakePart (options){
 
     options = options || {};
+    BaseElement.call(this, options);
     this.direction =  (options.direction !== undefined) ? options.direction : 'right';
 
 }
