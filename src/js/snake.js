@@ -1,5 +1,7 @@
 ﻿'use strict';
 
+var SnakePart = require('./snake.part.js');
+
 function  Snake (options){
 
     options = options || {};
@@ -13,7 +15,10 @@ function  Snake (options){
 
 Snake.prototype.eat = function(){
 
-    this.length = this.length + 1;
+    var snakePart = new SnakePart();
+        this.parts.push(snakePart);
+    snakePart.direction = (this.parts[this.parts.length - 1].direction !== undefined)
+        ? this.parts[this.parts.length - 1].direction : this.direction;
 
 };
 
@@ -21,6 +26,8 @@ Snake.prototype.eat = function(){
 Snake.prototype.move = function(steps){
 
     this.steps = (this.steps !== undefined) ? this.steps : 1;
+
+
 
 };
 
