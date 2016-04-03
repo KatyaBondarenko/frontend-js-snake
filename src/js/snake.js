@@ -3,16 +3,16 @@
 function  Snake (options){
 
     options = options || {};
-    this.parts  = [];
-    this.head = parts[0];
-    this.length = parts.length;
-    this.direction;
+
+    this.length = options.length;
+    this.direction = options.direction;
+    this.parts = [];
 
 }
 
 Snake.prototype.eat = function(){
 
-
+    this.length = this.length + 1;
 
 };
 
