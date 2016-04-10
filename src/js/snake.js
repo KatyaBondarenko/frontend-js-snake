@@ -7,7 +7,7 @@ function  Snake (options){
     options = options || {};
 
     this.length = options.length || 0;
-    this.direction = options.direction || 'down';
+    this.direction = options.direction || 'right';
     this.parts = [];
     this.head = this.parts[0];
 

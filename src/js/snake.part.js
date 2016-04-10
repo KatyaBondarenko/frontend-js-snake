@@ -15,7 +15,8 @@ SnakePart.prototype.constructor = SnakePart;
 
 SnakePart.prototype.move = function(steps){
 
-    if (steps > 0) {
+    steps = steps || 0
+
         switch (this.direction) {
             case 'right':
                 this.x = this.x + steps;
@@ -29,12 +30,8 @@ SnakePart.prototype.move = function(steps){
             case 'down':
                 this.y = this.y + steps;
                 break;
-            default:
-                this.x = 0;
-                this.y = 0;
-        }
-    }
 
+        }
 
 };
 
